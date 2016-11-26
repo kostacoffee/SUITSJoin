@@ -36,7 +36,7 @@ export default {
 	justify-content: center;
 	align-items: center;
 	margin: auto;
-	height: 100vh;
+	height: 100%;
 }
 
 body {
@@ -56,6 +56,10 @@ body {
 	margin-top: -100px;
 	text-align: center;
 	font-family: 
+}
+
+.form {
+	margin: 25px;
 }
 
 </style>

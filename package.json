@@ -4,7 +4,7 @@
   "author": "Kosta Dunn <kostacoffee@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot --content-base src/",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --host 0.0.0.0 --inline --hot --content-base src/",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules && cp src/index.html public/."
   },
   "dependencies": {},

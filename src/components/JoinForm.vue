@@ -79,7 +79,6 @@ export default {
 <style>
 .suits-card {
 	padding: 25px;
-	margin-top: -125px;
 }
 .gender-container {
 	display: flex;
