@@ -24,11 +24,11 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.svg$/,
         loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
+		options: {
+			name: '[name].[ext]'
+		}
       },
 	  {
 	  	test: /^index.html$/,

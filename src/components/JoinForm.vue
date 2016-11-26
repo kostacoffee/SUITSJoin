@@ -3,7 +3,7 @@ md-card.suits-card
 
 	md-card-header.header
 		div.md-title Join SUITS!
-		img.suits-image(src="assets/logo.svg", width=60, height=50)
+		img.suits-image(src="../assets/logo.svg", width=60, height=50)
 
 	form#join(v-on:submit="submitForm")
 
