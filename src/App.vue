@@ -53,9 +53,7 @@ body {
 }
 
 .thank-msg {
-	margin-top: -100px;
 	text-align: center;
-	font-family: 
 }
 
 .form {
