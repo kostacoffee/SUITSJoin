@@ -32,7 +32,7 @@ md-card.suits-card
 				label Student ID
 				md-input(type="number", v-model="sid")
 
-		md-checkbox.newsletter(v-model="newsletter") I want to receive weekly updates from SUITS.
+		md-switch.newsletter(v-model="newsletter") I want to receive weekly updates from SUITS.
 
 		md-card-actions
 			md-button.submit-button.md-raised.md-primary(type="submit") Join Suits
@@ -56,10 +56,13 @@ export default {
 				sid: this.sid,
 				newsletter: this.newsletter
 			}
-			let memberid = md5(this.email);
-			let member =  db.ref('members/'+memberid);
-			await member.set(data)
-			this.$emit('submitted');
+				try {
+					await this.$http.post("https://api.suits.org.au/members", data);
+					this.$emit('submitted');
+				}
+				catch (e) {
+					console.log(e);
+				}
 		}
 	},
 	data () {
