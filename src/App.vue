@@ -37,6 +37,7 @@ export default {
 	justify-content: center
 	align-items: center
 	margin: auto
+	margin-top: 5%
 	height: 100%
 
 body
@@ -48,7 +49,7 @@ body
 
 
 .slide-form-enter, .slide-form-leave-active
-	transform: translateY(-10%)
+	transform: translateY(-30%)
 	opacity: 0
 
 
