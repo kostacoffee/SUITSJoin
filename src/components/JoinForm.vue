@@ -39,9 +39,6 @@ md-card.suits-card
 </template>
 
 <script>
-import db from '../db';
-import md5 from '../md5';
-
 export default {
 	name: 'join-form',
 	methods: {
