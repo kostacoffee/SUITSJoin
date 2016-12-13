@@ -30,34 +30,34 @@ export default {
 }
 </script>
 
-<style>
-.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
-	height: 100%;
-}
+<style lang="sass">
 
-body {
-	background-color: #f3f9fe;
-}
+.container
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: auto
+	height: 100%
 
-.slide-form-enter-active, .slide-form-leave-active {
-	transition: all .5s ease;
-}
+body
+	background-color: #f3f9fe
 
-.slide-form-enter, .slide-form-leave-active {
-	transform: translateY(-10%);
-	opacity: 0;
-}
 
-.thank-msg {
-	text-align: center;
-}
+.slide-form-enter-active, .slide-form-leave-active
+	transition: all .5s ease
 
-.form {
-	margin: 25px;
-}
+
+.slide-form-enter, .slide-form-leave-active
+	transform: translateY(-10%)
+	opacity: 0
+
+
+.thank-msg
+	text-align: center
+
+
+.form
+	margin: 25px
+
 
 </style>

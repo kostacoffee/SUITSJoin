@@ -25,10 +25,10 @@ md-card.suits-card
 			md-input(type="email", v-model="email", required)
 
 		div.number-container
-			md-input-container
+			md-input-container.num-field
 				label Access Number
 				md-input(type="number", v-model="access")
-			md-input-container
+			md-input-container.num-field
 				label Student ID
 				md-input(type="number", v-model="sid")
 
@@ -76,35 +76,36 @@ export default {
 }
 </script>
 
-<style>
-.suits-card {
-	padding: 25px;
-}
-.gender-container {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-.name-container {
-	display: flex;
-	justify-content: space-between;
-}
-.name-field {
-	width: 45%;
-}
-.header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.loader {
+<style lang="sass">
+
+.suits-card
+	padding: 25px
+
+.gender-container
+	display: flex
+	justify-content: space-around
+	align-items: center
+
+.name-container, .number-container
+	display: flex
+	justify-content: space-between
+
+.name-field, .num-field
+	width: 40%
+
+.header
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.loader
 	float: left
-}
-.suits-image {
-	width: 60px;
-	height: 50px;
-}
-.submit-button {
-	float: right;
-}
+
+.suits-image
+	width: 60px
+	height: 50px
+
+.submit-button
+	float: right
+
 </style>
