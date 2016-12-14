@@ -2,7 +2,7 @@
 md-card.suits-card
 
 	md-card-header.header
-		div.md-title Join SUITS!
+		div.md-title Join SUITS
 		img.suits-image(src="../assets/logo.svg", width=60, height=50)
 
 	form#join(v-on:submit="submitForm")
@@ -53,13 +53,18 @@ export default {
 				sid: this.sid,
 				newsletter: this.newsletter
 			}
-				try {
-					await this.$http.post("https://api.suits.org.au/members", data);
-					this.$emit('submitted');
-				}
-				catch (e) {
-					console.log(e);
-				}
+
+			// create and send an async post
+			let req = new XMLHttpRequest();
+			req.open('POST', 'https://api.suits.org.au/members');
+			req.setRequestHeader('Content-Type', 'application/json');
+			let comp = this;
+			req.onload = function () {
+				if (req.status == 200)
+					comp.$emit('submitted');
+			}
+			req.send(JSON.stringify(data));
+			
 		}
 	},
 	data () {
