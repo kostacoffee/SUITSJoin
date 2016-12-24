@@ -5,8 +5,7 @@ md-card.suits-card
 		div.md-title Join SUITS
 		img.suits-image(src="../assets/logo.svg", width=60, height=50)
 
-	form#join(v-on:submit="submitForm")
-
+	form#join(v-on:submit="submitForm") 
 		div.name-container
 			md-input-container.name-field
 				label First Name
@@ -51,7 +50,8 @@ export default {
 				email: this.email.trim().toLowerCase(),
 				access: this.access,
 				sid: this.sid,
-				newsletter: this.newsletter
+				newsletter: this.newsletter,
+				registered: true
 			}
 
 			// create and send an async post
@@ -109,7 +109,6 @@ export default {
 .suits-image
 	width: 60px
 	height: 50px
-
 .submit-button
 	float: right
 
