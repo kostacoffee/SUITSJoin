@@ -5,7 +5,7 @@ md-card.suits-card
 		div.md-title Join SUITS
 		img.suits-image(src="../assets/logo.svg", width=60, height=50)
 
-	form#join(v-on:submit="submitForm") 
+	form#join(@submit.prevent="submitForm")
 		div.name-container
 			md-input-container.name-field
 				label First Name
@@ -42,15 +42,18 @@ export default {
 	name: 'join-form',
 	methods: {
 		submitForm: async function(e) {
-			e.preventDefault();
+			let dataOrUndefined = (data) => {
+				return data ? data : undefined;
+			}
+
 			let data = {
-				firstName: this.firstName,
-				lastName: this.lastName,
-				gender: this.gender,
-				email: this.email.trim().toLowerCase(),
-				access: this.access,
-				sid: this.sid,
-				newsletter: this.newsletter,
+				firstName: dataOrUndefined(this.firstName),
+				lastName: dataOrUndefined(this.lastName),
+				gender: dataOrUndefined(this.gender),
+				email: dataOrUndefined(this.email).trim().toLowerCase(),
+				access: dataOrUndefined(this.access),
+				sid: dataOrUndefined(this.sid),
+				newsletter: dataOrUndefined(this.newsletter),
 				registered: true
 			}
 
