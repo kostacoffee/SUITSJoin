@@ -64,7 +64,7 @@ export default {
 
 			// create and send an async post
 			let req = new XMLHttpRequest();
-			req.open('POST', 'http://127.0.0.1:3000/members');
+			req.open('POST', 'https://api.suits.org.au/members');
 			req.setRequestHeader('Content-Type', 'application/json');
 			let comp = this;
 			req.onload = function () {
