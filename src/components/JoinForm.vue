@@ -78,7 +78,7 @@ export default {
 			email: "",
 			access: "",
 			sid: "",
-			newsletter: false,
+			newsletter: true,
 		}
 	}
 }
