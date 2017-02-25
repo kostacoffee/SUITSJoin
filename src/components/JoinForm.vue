@@ -31,7 +31,10 @@ md-card.suits-card
 				label Student ID
 				md-input(type="number", v-model="sid")
 
-		md-switch.newsletter(v-model="newsletter") I want to receive weekly updates from SUITS.
+		div.extra-details
+			md-checkbox(v-model="isPenultimate") I am in my penultimate year of university.
+			md-checkbox(v-model="doingIT") I am doing an IT/CompSci related degree.
+			md-switch(v-model="newsletter") I want to receive weekly updates from SUITS.
 
 		md-card-actions
 			md-button.submit-button.md-raised.md-primary(type="submit") Join Suits
@@ -54,12 +57,14 @@ export default {
 				access: dataOrUndefined(this.access),
 				sid: dataOrUndefined(this.sid),
 				newsletter: dataOrUndefined(this.newsletter),
+				isPenultimate: dataOrUndefined(this.isPenultimate),
+				doingIT: dataOrUndefined(this.doingIT),
 				registered: true
 			}
 
 			// create and send an async post
 			let req = new XMLHttpRequest();
-			req.open('POST', 'https://api.suits.org.au/members');
+			req.open('POST', 'http://127.0.0.1:3000/members');
 			req.setRequestHeader('Content-Type', 'application/json');
 			let comp = this;
 			req.onload = function () {
@@ -78,7 +83,9 @@ export default {
 			email: "",
 			access: "",
 			sid: "",
-			newsletter: true,
+			isPenultimate: false,
+			doingIT: false,
+			newsletter: true
 		}
 	}
 }
@@ -88,6 +95,7 @@ export default {
 
 .suits-card
 	padding: 25px
+	max-width: 460px
 
 .gender-container
 	display: flex
