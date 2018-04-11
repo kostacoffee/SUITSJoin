@@ -32,7 +32,7 @@ md-card.suits-card
 				md-input(type="number", v-model="sid")
 
 		div.extra-details
-			md-checkbox(v-model="isPenultimate") I am in my penultimate year of university.
+			md-checkbox(v-model="isPenultimate") I am in my penultimate (second last) year of university.
 			md-checkbox(v-model="doingIT") I am doing an IT/CompSci related degree.
 			md-switch(v-model="newsletter") I want to receive weekly updates from SUITS.
 
